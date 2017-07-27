@@ -55,6 +55,12 @@ return [
             'visibility' => 'public',
         ],
 
+        'uploads' => [
+            'driver' => 'local',
+            'root' => storage_path('app/uploads'), // 存储到storage/app/uploads下面
+//            'root' => public_path('uploads'), // 存储到public文件夹下面
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_KEY'),
